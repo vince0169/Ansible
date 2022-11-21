@@ -2,8 +2,6 @@
 - name: "Apache installation using docker"
   hosts: prod
   become: true
-  vars_files:
-    - files/secrets/credentials.yml
   pre_tasks:
     - name: Install some package 
       package: name='{{ item }}' state=present
