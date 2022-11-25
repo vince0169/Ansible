@@ -1,0 +1,5 @@
+# defaults variables
+template_src: index.html.j2
+template_dst: /home/admin/index.html
+external_port: 80
+internal_port: 80

@@ -1,0 +1,14 @@
+---
+- name: Copy website file template
+      template:
+        src: "{{ template_src }}"
+        dest: "{{ template_dst }}"
+        
+    - name: Create Apache container
+      docker_container:
+        name: webapp
+        image: httpd
+        ports:
+          - "{{ external_port }}:{{ intrenal_port }}"
+        volumes:
+          - "{{ template_dst }}:/usr/local/apache2/htdocs/index.html"
