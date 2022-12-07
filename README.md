@@ -5,8 +5,8 @@
 
 ## :file_folder: TP5 - playbook :file_folder:
 
-Here we are going to deploy an Apapche container using an Ansible playbook.
-First we create our inventory file (hosts.yml) which will contain the group prod with the ip of our client machine (here 10.0.1.4).
+Here we are going to deploy an Apapche container using an Ansible playbook.  
+First we create our inventory file (hosts.yml) which will contain the group prod with the ip of our client machine (here 10.0.1.4).  
 Then we will create the group_vars folder which will include the prod.yml file.
 This one regroups the connection informations (ansible_user and ansible_password).
 We create our playbook named deploy.yml to deploy Apache with Docker on the host machine. We use the httpd image and expose port 80.
