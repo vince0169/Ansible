@@ -33,7 +33,8 @@ pre_tasks:
 Our site should display "Bienvenue sur  {{ ansible_hostname }}". 
 For that we create the templates folder and the index.html.j2 file :
 
-![Texte alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/Image2_Ansible.png?token=GHSAT0AAAAAAB35AY2U34S4U4QACKJ2FMXKY4QV2TA)
+![Texte
+   alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/Image2_Ansible.png?token=GHSAT0AAAAAAB35AY2UJWHZPUKQLSGGG326Y4QWFPQ)
 
 
 In the playbook we add the template module that copies the index.html.j2 file on our remote machine (in /home/admin/index.html) :
