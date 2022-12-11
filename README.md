@@ -29,13 +29,11 @@ pre_tasks:
     - wget
     - git
   ```
-  
+
 Our site should display "Bienvenue sur  {{ ansible_hostname }}". 
 For that we create the templates folder and the index.html.j2 file :
 
-![Texte
-   alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/Image2_Ansible.png?token=GHSAT0AAAAAAB35AY2UJWHZPUKQLSGGG326Y4QWFPQ)
-
+![Image2_Ansible](https://user-images.githubusercontent.com/104725171/206933639-59b2c5b4-3b66-406c-a85a-43941f78be14.png)
 
 In the playbook we add the template module that copies the index.html.j2 file on our remote machine (in /home/admin/index.html) :
 ```
@@ -60,8 +58,8 @@ This is not a good practice but we can encrypt it.
 To do this, we create the files/secret/credentials.vault file and move our ansible_password variable (we call it here vault_ansible_password) inside it :
 
 ![TP7_Ansible_Image1](https://user-images.githubusercontent.com/104725171/206931903-37051810-d977-4ebb-8c4d-1397a7edbee9.png)
-
-   
+<br>
+<br>
 We encrypt this file with the ansible-vault encrypt command, we must then choose an mdp :
 ![Texte
    alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/TP7_Ansible_Image2.png?token=GHSAT0AAAAAAB35AY2VJR3GKAUHVBROFHM4Y4QU32Q)
