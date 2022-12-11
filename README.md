@@ -58,8 +58,9 @@ In the previous exercises we defined our ansible_password variable in clear text
 This is not a good practice but we can encrypt it.
 
 To do this, we create the files/secret/credentials.vault file and move our ansible_password variable (we call it here vault_ansible_password) inside it :
-![Texte
-   alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/TP7_Ansible_Image1.png?token=GHSAT0AAAAAAB35AY2VB77D3DBEELWFMIHKY4QU2UA)
+
+![TP7_Ansible_Image1](https://user-images.githubusercontent.com/104725171/206931903-37051810-d977-4ebb-8c4d-1397a7edbee9.png)
+
    
 We encrypt this file with the ansible-vault encrypt command, we must then choose an mdp :
 ![Texte
