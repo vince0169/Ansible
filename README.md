@@ -60,13 +60,15 @@ To do this, we create the files/secret/credentials.vault file and move our ansib
 ![TP7_Ansible_Image1](https://user-images.githubusercontent.com/104725171/206931903-37051810-d977-4ebb-8c4d-1397a7edbee9.png)
 <br>
 <br>
-We encrypt this file with the ansible-vault encrypt command, we must then choose an mdp :
-![Texte
-   alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/TP7_Ansible_Image2.png?token=GHSAT0AAAAAAB35AY2VJR3GKAUHVBROFHM4Y4QU32Q)
+We encrypt this file with the ansible-vault encrypt command, we must then choose a Vault password :
+
+![TP7_Ansible_Image2](https://user-images.githubusercontent.com/104725171/206999820-73cb8954-442d-4091-97b0-d1baeacfab5e.png)
+
    
-We can see that the file is well encrypted by making a cat on it : 
-![Texte
-   alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/TP7_Ansible_Image3.png?token=GHSAT0AAAAAAB35AY2VY7W3R65ZSGVW74MSY4QU4ZA)
+We can see that the file is well encrypted by making a cat command on it :
+
+![TP7_Ansible_Image3](https://user-images.githubusercontent.com/104725171/207000224-d03853d3-f63c-43bf-9135-ddac62c74f76.png)
+
    
 Then we specify the path of the file with the variable vars_files in our playbook : 
 ```
@@ -74,9 +76,10 @@ var_files:
   - files/secret/credentials.vault
 ```
   
-Finally we can execute ansible-playbook command by specifying --ask-vault-pass in the command. We have then the mdp BECOME and Vault requested : 
-![Texte
-   alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/TP7_Ansible_Image4.png?token=GHSAT0AAAAAAB35AY2VE7NDRRIO5SEQNCEIY4QVA3Q)
+Finally we can execute ansible-playbook command by specifying --ask-vault-pass in the command.  
+We have then the mdp BECOME and Vault requested : 
+
+![TP7_Ansible_Image4](https://user-images.githubusercontent.com/104725171/207000474-a7b972e3-ccfe-42ba-9b54-c6994fa0cc3a.png)
 
 
 
@@ -89,9 +92,10 @@ First we create the roles/requirements.yml file in which we specify the source o
 # Install a role for wordpress
 - src: https://github.com/diranetafen/ansible-role-containerized-wordpress.git
 ````
-Then we install our role : 
-![Texte
-   alternatif](https://raw.githubusercontent.com/vince0169/images_readme/main/TP8_Ansible_Image1.png?token=GHSAT0AAAAAAB35AY2UOEAFTWURGBKSI5LMY4QVIAA)
+Then we install our role :
+
+![TP8_Ansible_Image1](https://user-images.githubusercontent.com/104725171/207000817-807cfccb-4ee3-40f7-b376-599fe512bf0d.png)
+
    
 Finally we create our playbook with our role and execute the ansible-playbook command: 
 ```
